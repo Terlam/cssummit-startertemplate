@@ -15,4 +15,5 @@ export const brandHex = {
   yellow: "#f2c272",
   onFill: "#101820",
   edge: "#3f464f",
+  paperGround: "#ffffff",
 } as const;

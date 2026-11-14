@@ -10,7 +10,8 @@ const heights = { sm: "h-4", md: "h-[1.375rem]", lg: "h-8" } as const;
 
 /**
  * The Chi Tech CLLCT wordmark with the project name under it. The wordmark is a white, teal
- * and orange PNG made for dark backgrounds, which is why the theme is dark only.
+ * and orange PNG made for dark backgrounds; on the light "paper" surface --wordmark-filter
+ * flips it so it stays readable.
  * Rebrand by editing `site.name` in lib/site.ts (or swap the PNG in public/brand/).
  */
 export function Brand({
@@ -38,7 +39,10 @@ export function Brand({
         width={496}
         height={60}
         priority
-        className={cn("block w-auto max-w-full", heights[size])}
+        className={cn(
+          "block w-auto max-w-full [filter:var(--wordmark-filter)]",
+          heights[size],
+        )}
       />
       {showName ? (
         <span className="truncate font-mono text-[0.6875rem] font-semibold tracking-[0.08em] text-muted-foreground uppercase transition-colors group-hover:text-primary-text">

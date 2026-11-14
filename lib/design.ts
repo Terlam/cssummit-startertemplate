@@ -11,14 +11,14 @@
  */
 
 export const AXES = {
-  shape: ["sharp", "soft", "round", "pill"],
-  buttons: ["offset", "solid", "outline", "glow", "brutal"],
-  surface: ["raised", "flat", "bordered", "glass"],
-  type: ["geist", "editorial", "mono", "display"],
-  layout: ["split", "centered", "editorial", "bento"],
+  shape: ["sharp", "soft", "round", "pill", "capsule"],
+  buttons: ["offset", "solid", "outline", "glow", "brutal", "press"],
+  surface: ["raised", "flat", "bordered", "glass", "paper"],
+  type: ["geist", "editorial", "mono", "display", "friendly"],
+  layout: ["split", "centered", "editorial", "bento", "marketplace"],
   nav: ["bar", "floating", "sidebar"],
   density: ["compact", "comfortable", "spacious"],
-  accent: ["orange", "teal", "green", "yellow"],
+  accent: ["orange", "teal", "green", "yellow", "rose"],
 } as const;
 
 export type Axis = keyof typeof AXES;
@@ -99,6 +99,16 @@ export const PRESETS = {
     nav: "floating",
     density: "comfortable",
     accent: "teal",
+  },
+  marketplace: {
+    shape: "capsule",
+    buttons: "press",
+    surface: "paper",
+    type: "friendly",
+    layout: "marketplace",
+    nav: "bar",
+    density: "comfortable",
+    accent: "rose",
   },
 } as const satisfies Record<string, Design>;
 

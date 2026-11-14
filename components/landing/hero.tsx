@@ -3,6 +3,7 @@ import type { Design } from "@/lib/design";
 import { HeroBento } from "./hero/bento";
 import { HeroCentered } from "./hero/centered";
 import { HeroEditorial } from "./hero/editorial";
+import { HeroMarketplace } from "./hero/marketplace";
 import { HeroSplit } from "./hero/split";
 
 /** The landing hero for the current `layout` design axis. */
@@ -16,6 +17,7 @@ export function Hero({ layout }: { layout: Design["layout"] }) {
         centered: <HeroCentered />,
         editorial: <HeroEditorial />,
         bento: <HeroBento />,
+        marketplace: <HeroMarketplace />,
       }}
     />
   );

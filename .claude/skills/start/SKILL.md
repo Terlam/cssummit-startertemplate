@@ -36,7 +36,7 @@ Then map their answer to one of the seven build types:
 - Recommend **one** kit and say why in one sentence. Offer a second only if the idea clearly needs it (for example `map` + `website`). Never more than two.
 - If they are mostly beginners, prefer kits that need no account.
 - If they pick `app` or `chatbot`, tell them they will connect their own account later with `/setup`, and that it works in demo mode until then.
-- Suggest a design preset that fits the audience: `summit` (default, bold), `soft` (friendly, rounded), `editorial` (story, serif), `brutalist` (loud, high contrast), `terminal` (techy, mono), `bento` (lots of tiles). Or offer `shuffle` for a random look they can tweak later.
+- Suggest a design preset that fits the audience: `summit` (default, bold), `soft` (friendly, rounded), `editorial` (story, serif), `brutalist` (loud, high contrast), `terminal` (techy, mono), `bento` (lots of tiles), `marketplace` (light, friendly, browse-and-pick). Or offer `shuffle` for a random look they can tweak later.
 
 Wait for the team to agree before running anything.
 

@@ -15,6 +15,9 @@
 :root[data-layout="bento"] {
   --container-max: 80rem;
 }
+:root[data-layout="marketplace"] {
+  --container-max: 80rem;
+}
 
 :root[data-layout="split"]
   [data-layout-variant]:not([data-layout-variant="split"]),
@@ -23,6 +26,8 @@
 :root[data-layout="editorial"]
   [data-layout-variant]:not([data-layout-variant="editorial"]),
 :root[data-layout="bento"]
-  [data-layout-variant]:not([data-layout-variant="bento"]) {
+  [data-layout-variant]:not([data-layout-variant="bento"]),
+:root[data-layout="marketplace"]
+  [data-layout-variant]:not([data-layout-variant="marketplace"]) {
   display: none;
 }

@@ -1,6 +1,7 @@
 /* type: heading and body font pairing, heading weight, tracking and case.
    Font families come from next/font variables set in app/layout.tsx:
-   --font-geist, --font-geist-mono, --font-fraunces, --font-bricolage, --font-jetbrains.
+   --font-geist, --font-geist-mono, --font-fraunces, --font-bricolage, --font-jetbrains,
+   --font-dm-sans.
    Tokens: --font-body, --font-heading-family, --font-code, --heading-*.
    Utilities: font-sans, font-heading, font-mono. */
 
@@ -42,4 +43,14 @@
   --heading-tracking: -0.035em;
   --heading-transform: uppercase;
   --heading-leading: 0.92;
+}
+
+:root[data-type="friendly"] {
+  --font-body: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading-family:
+    var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --heading-weight: 800;
+  --heading-tracking: -0.03em;
+  --heading-transform: none;
+  --heading-leading: 1.05;
 }

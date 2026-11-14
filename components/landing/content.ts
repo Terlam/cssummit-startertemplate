@@ -25,6 +25,10 @@ export type KitSummary = {
   title: string;
   blurb: string;
   icon: LucideIcon;
+  /** The routes the kit adds. */
+  pages: string[];
+  /** The account the team must bring, if any. Kits without one say "No account needed". */
+  account?: string;
 };
 
 /** The seven kits from the Hackathon 101 deck. Each is opt-in: `pnpm kit add <name>`. */
@@ -34,42 +38,51 @@ export const kitCatalog: KitSummary[] = [
     title: "Website",
     blurb: "About, contact and content pages.",
     icon: GlobeIcon,
+    pages: ["/about", "/contact", "/updates"],
   },
   {
     name: "app",
     title: "App",
     blurb: "Sign-in and a dashboard on your own Supabase.",
     icon: KeyRoundIcon,
+    pages: ["/login", "/signup", "/dashboard"],
+    account: "Your own Supabase (demo mode without)",
   },
   {
     name: "chatbot",
     title: "Chatbot",
     blurb: "Streaming chat on the Claude API.",
     icon: BotIcon,
+    pages: ["/chat"],
+    account: "Your own Anthropic key (demo replies without)",
   },
   {
     name: "game",
     title: "Game",
     blurb: "Canvas game loop, input and high scores.",
     icon: Gamepad2Icon,
+    pages: ["/play"],
   },
   {
     name: "dashboard",
     title: "Dashboard",
     blurb: "Stat tiles, charts and a sortable table.",
     icon: ChartColumnIcon,
+    pages: ["/insights"],
   },
   {
     name: "map",
     title: "Map",
     blurb: "A Chicago map with markers. No API key.",
     icon: MapIcon,
+    pages: ["/map"],
   },
   {
     name: "learning",
     title: "Learning",
     blurb: "Lessons, quizzes and progress.",
     icon: BookOpenIcon,
+    pages: ["/learn"],
   },
 ];
 

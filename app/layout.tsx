@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import {
   Bricolage_Grotesque,
+  DM_Sans,
   Fraunces,
   Geist,
   Geist_Mono,
@@ -44,6 +45,11 @@ const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   preload: false,
 });
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+  preload: false,
+});
 
 export const metadata: Metadata = {
   metadataBase: getSiteUrl(),
@@ -63,9 +69,12 @@ export const metadata: Metadata = {
   },
 };
 
+// The browser chrome follows the configured surface: light for "paper", dark otherwise.
+const light = resolveDesign(designConfig).surface === "paper";
+
 export const viewport: Viewport = {
-  themeColor: brandHex.paper,
-  colorScheme: "dark",
+  themeColor: light ? brandHex.paperGround : brandHex.paper,
+  colorScheme: light ? "light" : "dark",
 };
 
 export default function RootLayout({
@@ -87,6 +96,7 @@ export default function RootLayout({
         fraunces.variable,
         bricolage.variable,
         jetbrains.variable,
+        dmSans.variable,
       )}
     >
       <head>

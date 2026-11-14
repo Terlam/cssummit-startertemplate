@@ -115,16 +115,16 @@ Your look is one choice per **axis**, saved in `design.config.ts`:
 
 | Axis | Options | Changes |
 |---|---|---|
-| `shape` | sharp, soft, round, pill | How rounded corners are |
-| `buttons` | offset, solid, outline, glow, brutal | Button style and hover effect |
-| `surface` | raised, flat, bordered, glass | How cards and panels look |
-| `type` | geist, editorial, mono, display | Fonts for headings and text |
-| `layout` | split, centered, editorial, bento | Home page layout |
+| `shape` | sharp, soft, round, pill, capsule | How rounded corners are |
+| `buttons` | offset, solid, outline, glow, brutal, press | Button style and hover effect |
+| `surface` | raised, flat, bordered, glass, paper | How cards and panels look |
+| `type` | geist, editorial, mono, display, friendly | Fonts for headings and text |
+| `layout` | split, centered, editorial, bento, marketplace | Home page layout |
 | `nav` | bar, floating, sidebar | Site navigation |
 | `density` | compact, comfortable, spacious | Spacing |
-| `accent` | orange, teal, green, yellow | Main highlight colour |
+| `accent` | orange, teal, green, yellow, rose | Main highlight colour |
 
-**Presets** set every axis at once: `summit` (default), `brutalist`, `soft`, `editorial`, `terminal`, `bento`.
+**Presets** set every axis at once: `summit` (default), `brutalist`, `soft`, `editorial`, `terminal`, `bento`, `marketplace` (light, rose accent, kits as listing cards).
 
 `design.config.ts` holds an optional `preset` plus any axis values. Axis values win over the preset. This is the `soft` preset with orange as the accent:
 

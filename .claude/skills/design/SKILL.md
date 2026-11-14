@@ -10,16 +10,16 @@ The look is one value per axis, kept in `design.config.ts`. Read `lib/design.ts`
 
 | Axis | Options (at time of writing) | Kind |
 |---|---|---|
-| `shape` | sharp, soft, round, pill | CSS (`styles/design/shape.css`) |
-| `buttons` | offset, solid, outline, glow, brutal | CSS |
-| `surface` | raised, flat, bordered, glass | CSS |
-| `type` | geist, editorial, mono, display | CSS |
+| `shape` | sharp, soft, round, pill, capsule | CSS (`styles/design/shape.css`) |
+| `buttons` | offset, solid, outline, glow, brutal, press | CSS |
+| `surface` | raised, flat, bordered, glass, paper | CSS |
+| `type` | geist, editorial, mono, display, friendly | CSS |
 | `density` | compact, comfortable, spacious | CSS |
-| `accent` | orange, teal, green, yellow | CSS |
-| `layout` | split, centered, editorial, bento | Component (`components/landing/hero/`) |
+| `accent` | orange, teal, green, yellow, rose | CSS |
+| `layout` | split, centered, editorial, bento, marketplace | Component (`components/landing/hero/`) |
 | `nav` | bar, floating, sidebar | Component (`components/nav/`) |
 
-Presets: summit, brutalist, soft, editorial, terminal, bento.
+Presets: summit, brutalist, soft, editorial, terminal, bento, marketplace.
 
 Pick the smallest change that does what the learner asked.
 
@@ -67,7 +67,7 @@ Add an entry to the presets in `lib/design.ts` with one value for every axis, th
 ## Rules
 
 - Never hardcode colours, radii or fonts in components. Change tokens or axis files instead.
-- Keep it dark: the brand is dark-only.
+- Keep it dark unless the learner asks for light: `paper` is the only light surface, and a new light option must also set the paper text colours in `accent.css`.
 - Fonts come from `next/font`; a new font family needs wiring in the root layout. Mention this before doing it.
 
 ## Check

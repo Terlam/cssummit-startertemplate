@@ -12,8 +12,9 @@
 @import "../styles/design/layout.css";
 @import "../styles/design/nav.css";
 
-/* Dark only: the html element always carries .dark, so shadcn's dark: classes apply. */
-@custom-variant dark (&:is(.dark *));
+/* Dark by default: the html element always carries .dark, so shadcn's dark: classes apply.
+   The light "paper" surface switches them off, so they follow the switcher live. */
+@custom-variant dark (&:is(.dark:not([data-surface="paper"]) *));
 
 /* Structural variants, for the rare component that must change with the layout or nav axis:
    `layout-bento:grid-cols-4`, `nav-sidebar:lg:pl-64`. */
@@ -21,6 +22,7 @@
 @custom-variant layout-centered (&:where([data-layout="centered"] *));
 @custom-variant layout-editorial (&:where([data-layout="editorial"] *));
 @custom-variant layout-bento (&:where([data-layout="bento"] *));
+@custom-variant layout-marketplace (&:where([data-layout="marketplace"] *));
 @custom-variant nav-bar (&:where([data-nav="bar"] *));
 @custom-variant nav-floating (&:where([data-nav="floating"] *));
 @custom-variant nav-sidebar (&:where([data-nav="sidebar"] *));
@@ -60,6 +62,30 @@
   --brand-edge-strong: #5a626c;
   --brand-edge-control: #7f8792;
   --brand-focus: #7ecac6;
+
+  /* Rose accent, and the light neutrals of the "paper" surface. */
+  --brand-rose: #da1e5a;
+  --brand-rose-text: #ff7a9c;
+  --brand-tint-rose: rgb(218 30 90 / 0.14);
+  --brand-on-rose: #ffffff;
+
+  --brand-paper-ground: #ffffff;
+  --brand-paper-soft: #f7f7f7;
+  --brand-paper-ink: #222222;
+  --brand-paper-muted: #6a6a6a;
+  --brand-paper-line: #ebebeb;
+  --brand-paper-edge: #dddddd;
+  --brand-paper-control: #8a8a8a;
+  --brand-paper-danger: #c0362c;
+  --brand-paper-success: #047857;
+  --brand-paper-warning: #8a6a00;
+
+  /* Accent text colours that pass 4.5:1 on the paper surface. */
+  --brand-orange-text-paper: #b45309;
+  --brand-teal-text-paper: #0f766e;
+  --brand-green-text-paper: #047857;
+  --brand-yellow-text-paper: #8a6a00;
+  --brand-rose-text-paper: #da1e5a;
 }
 
 /* ------------------------------------------------------------------------------------------
@@ -126,6 +152,9 @@
 
   /* page background decoration (surface.css: glass adds a glow) */
   --page-glow: none;
+
+  /* The wordmark PNG is drawn for dark grounds; surface.css flips it on light ones. */
+  --wordmark-filter: none;
 }
 
 @media (max-width: 47.99rem) {

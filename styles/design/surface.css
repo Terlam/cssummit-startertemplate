@@ -60,3 +60,36 @@
       transparent 70%
     );
 }
+
+/* paper: the one light option. A white page, near-black ink, hairline borders and soft
+   shadows. It redefines the neutral tokens too, not just the card treatment. */
+:root[data-surface="paper"] {
+  color-scheme: light;
+  --background: var(--brand-paper-ground);
+  --foreground: var(--brand-paper-ink);
+  --card: var(--brand-paper-ground);
+  --card-foreground: var(--brand-paper-ink);
+  --popover: var(--brand-paper-ground);
+  --popover-foreground: var(--brand-paper-ink);
+  --secondary: var(--brand-paper-soft);
+  --secondary-foreground: var(--brand-paper-ink);
+  --muted: var(--brand-paper-soft);
+  --muted-foreground: var(--brand-paper-muted);
+  --accent: var(--brand-paper-soft);
+  --accent-foreground: var(--brand-paper-ink);
+  --destructive: var(--brand-paper-danger);
+  --destructive-foreground: var(--brand-paper-ground);
+  --success: var(--brand-paper-success);
+  --success-foreground: var(--brand-paper-ground);
+  --warning: var(--brand-paper-warning);
+  --warning-foreground: var(--brand-paper-ground);
+  --border: var(--brand-paper-edge);
+  --input: var(--brand-paper-control);
+  --ring: var(--brand-paper-ink);
+  --surface-bg: var(--card);
+  --surface-border-width: 1px;
+  --surface-border-color: var(--brand-paper-line);
+  --surface-shadow: 0 6px 16px rgb(0 0 0 / 0.12);
+  --surface-blur: none;
+  --wordmark-filter: invert(1) hue-rotate(180deg);
+}

@@ -1,7 +1,10 @@
 import type * as React from "react";
 import { cn } from "@/lib/utils";
 
-/** Eyebrow + h2 + intro for a landing section. Centres itself in the centered layout. */
+/**
+ * Eyebrow + h2 + intro for a landing section. Centres itself in the centered layout; the
+ * marketplace layout drops the eyebrow and uses a smaller title.
+ */
 export function SectionHeading({
   eyebrow,
   title,
@@ -22,8 +25,10 @@ export function SectionHeading({
         className,
       )}
     >
-      <p className="eyebrow">{eyebrow}</p>
-      <h2 className="text-3xl sm:text-5xl">{title}</h2>
+      <p className="eyebrow layout-marketplace:hidden">{eyebrow}</p>
+      <h2 className="text-3xl sm:text-5xl layout-marketplace:sm:text-4xl">
+        {title}
+      </h2>
       {children ? (
         <p className="text-lg text-pretty text-muted-foreground">{children}</p>
       ) : null}

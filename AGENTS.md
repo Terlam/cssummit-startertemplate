@@ -16,7 +16,7 @@ Explain what you do in plain language. Prefer small, working steps over big rewr
 
 ## Stack
 
-Next.js 16 (App Router; `proxy.ts`, not `middleware.ts`), React 19, TypeScript strict, Tailwind v4, shadcn/ui, Biome, pnpm. Dark theme only.
+Next.js 16 (App Router; `proxy.ts`, not `middleware.ts`), React 19, TypeScript strict, Tailwind v4, shadcn/ui, Biome, pnpm. Dark by default; the `paper` surface (used by the `marketplace` preset) is the one light option.
 
 ## Commands
 

@@ -88,3 +88,15 @@
   --btn-alt-shadow-hover: 6px 6px 0 var(--foreground);
   --btn-alt-hover-translate: -2px -2px;
 }
+
+/* press: a flat accent fill that darkens on hover and sinks a touch when pressed. */
+:root[data-buttons="press"] {
+  --btn-weight: 700;
+  --btn-border-width: 0px;
+  --btn-bg-hover: color-mix(in oklab, var(--primary) 86%, black);
+  --btn-shadow: none;
+  --btn-shadow-hover: 0 2px 8px rgb(0 0 0 / 0.18);
+  --btn-shadow-active: none;
+  --btn-hover-translate: 0 0;
+  --btn-active-translate: 0 1px;
+}

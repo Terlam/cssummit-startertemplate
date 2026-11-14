@@ -57,3 +57,37 @@
   --chart-4: var(--brand-green);
   --chart-5: var(--brand-muted);
 }
+
+:root[data-accent="rose"] {
+  --primary: var(--brand-rose);
+  --primary-foreground: var(--brand-on-rose);
+  --primary-text: var(--brand-rose-text);
+  --primary-tint: var(--brand-tint-rose);
+  --primary-shadow: var(--brand-teal);
+  --chart-1: var(--brand-rose);
+  --chart-2: var(--brand-teal);
+  --chart-3: var(--brand-yellow);
+  --chart-4: var(--brand-green);
+  --chart-5: var(--brand-muted);
+}
+
+/* On the light "paper" surface the text colours above are too pale, so each accent swaps in
+   a darker one that still passes 4.5:1, and offset shadows use the ink colour. */
+:root[data-surface="paper"] {
+  --primary-shadow: var(--brand-paper-ink);
+}
+:root[data-surface="paper"][data-accent="orange"] {
+  --primary-text: var(--brand-orange-text-paper);
+}
+:root[data-surface="paper"][data-accent="teal"] {
+  --primary-text: var(--brand-teal-text-paper);
+}
+:root[data-surface="paper"][data-accent="green"] {
+  --primary-text: var(--brand-green-text-paper);
+}
+:root[data-surface="paper"][data-accent="yellow"] {
+  --primary-text: var(--brand-yellow-text-paper);
+}
+:root[data-surface="paper"][data-accent="rose"] {
+  --primary-text: var(--brand-rose-text-paper);
+}

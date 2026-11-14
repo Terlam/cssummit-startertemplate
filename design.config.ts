@@ -1,20 +1,20 @@
 import type { DesignConfig } from "@/lib/design";
 
 /**
- * This project's look: one option per axis. Matches the "summit" preset.
+ * This project's look: one option per axis. Matches the "marketplace" preset.
  * Options are listed in lib/design.ts (AXES). Preview combinations with the design switcher
  * (bottom-right corner in development), then paste its "Copy config" output here.
  */
 const design: DesignConfig = {
-  preset: "summit",
-  shape: "round",
-  buttons: "offset",
-  surface: "raised",
-  type: "geist",
-  layout: "split",
+  preset: "marketplace",
+  shape: "capsule",
+  buttons: "press",
+  surface: "paper",
+  type: "friendly",
+  layout: "marketplace",
   nav: "bar",
   density: "comfortable",
-  accent: "orange",
+  accent: "rose",
 };
 
 export default design;

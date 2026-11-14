@@ -38,3 +38,13 @@
   --shape-badge: 999px;
   --shape-avatar: 999px;
 }
+
+/* capsule: pill buttons and badges, gently rounded cards and fields. */
+:root[data-shape="capsule"] {
+  --radius: 0.75rem;
+  --shape-control: 999px;
+  --shape-field: 0.75rem;
+  --shape-card: 1rem;
+  --shape-badge: 999px;
+  --shape-avatar: 999px;
+}
